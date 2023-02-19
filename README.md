@@ -5,7 +5,7 @@ for customers.
 
 ## Architecture
 ### Entity Relationship Diagram
-![alt entity-relationship-diagram](design/petstore-entity-diagram.png "Entity Relationship Diagram")
+![alt entity-relationship-diagram](design/domain-model.svg "Entity Relationship Diagram")
 
 ## Running the application in dev mode
 
