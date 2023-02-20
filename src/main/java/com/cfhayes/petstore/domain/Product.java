@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -43,7 +44,7 @@ public class Product extends AbstractEntity {
     @JoinTable(name = "products_reviews",
             joinColumns = @JoinColumn(name = "product_id"),
             inverseJoinColumns = @JoinColumn(name = "reviews_id"))
-    private Set<Review> reviews = new HashSet<>();
+    private Set<ProductReview> reviews = new HashSet<>();
 
     @ManyToOne
     @JoinColumn(name = "category_id")

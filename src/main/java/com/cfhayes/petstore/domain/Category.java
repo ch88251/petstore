@@ -22,7 +22,4 @@ public class Category extends AbstractEntity {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @NotNull
-    @Column(name = "description", nullable = false)
-    private String description;
 }

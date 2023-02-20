@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 public class Payment extends AbstractEntity {
 
     @NotNull
-    @Column(name = "paypal_payment_id")
+    @Column(name = "payment_id")
     private String paypalPaymentId;
 
     @NotNull

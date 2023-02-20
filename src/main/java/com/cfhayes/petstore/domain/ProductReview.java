@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,5 +30,4 @@ public class ProductReview extends AbstractEntity {
     @NotNull
     @Column(name = "rating", nullable = false)
     private Long rating;
-
 }

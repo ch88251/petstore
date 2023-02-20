@@ -1,15 +1,14 @@
 package com.cfhayes.petstore.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
@@ -25,12 +24,13 @@ public class Address {
     private String city;
 
     @NotNull
-    @Size(max = 10)
-    @Column(name = "postcode", length = 10, nullable = false)
-    private String postcode;
+    @Size(max = 2)
+    @Column(name = "state", length = 2, nullable = false)
+    private String state;
 
     @NotNull
-    @Size(max = 2)
-    @Column(name = "country", length = 2, nullable = false)
-    private String country;
+    @Size(max = 10)
+    @Column(name = "zipcode", length = 10, nullable = false)
+    private String zipcode;
+
 }
