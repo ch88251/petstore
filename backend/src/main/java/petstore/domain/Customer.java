@@ -1,13 +1,20 @@
 package petstore.domain;
 
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@Data
+@EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(callSuper = true)
 @Entity
 @Table(name = "customer")
 public class Customer extends AbstractEntity {
@@ -26,9 +33,6 @@ public class Customer extends AbstractEntity {
 
     @Embedded
     private Address address;
-
-    @OneToMany(mappedBy = "customer")
-    private List<Cart> carts;
 
     @Column(name = "enabled")
     private Boolean enabled;

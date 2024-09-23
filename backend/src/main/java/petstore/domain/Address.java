@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=false)
 public class Address {
 
-    @Column(name = "address_line1")
-    private String addressLine1;
+    @Column(name = "address1")
+    private String address1;
 
-    @Column(name = "address_line2")
-    private String addressLine2;
+    @Column(name = "address2")
+    private String address2;
 
     @Column(name = "city")
     private String city;
